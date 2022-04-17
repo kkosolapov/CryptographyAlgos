@@ -47,6 +47,5 @@ string CaesarCipher(int displacement, string &input){
     coded += currChar;
   }
 
-
   return coded;
 }
