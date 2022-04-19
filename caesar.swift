@@ -1,8 +1,4 @@
-#include <iostream>
-#include <string>
-#include <iomanip>
-
-using namespace std;
+import Foundation
 
 string CaesarCipher(int displacement, string &input);
 
