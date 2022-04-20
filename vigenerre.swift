@@ -53,8 +53,8 @@ string encrypt(string text)
 };
 
 var a, b;
-print("Masukkan Plaintext : \n");
-cin >> a;
+print("Masukkan Plaintext : \n")
+a;
 print("Masukkan Key : \n");
 cin >> b;
 string original = a;
