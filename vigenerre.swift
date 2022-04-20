@@ -54,10 +54,10 @@ string encrypt(string text)
 
 var a, b;
 print("Masukkan Plaintext : \n")
-a;
+a = readline();
 print("Masukkan Key : \n");
-cin >> b;
-string original = a;
+b = readline();
+var original = a;
 Vigenere chiper = b;
 string encrypted = chiper.encrypt(original);
 string decrypted = chiper.decrypt(encrypted);
