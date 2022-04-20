@@ -1,8 +1,5 @@
 import Foundation
 
-class Vigenere
-{
-
 public:
     string key;
     Vigenere(string key)
@@ -54,19 +51,16 @@ public:
         return out;
     }
 };
-int main()
-{
-    string a, b;
-    cout << "Masukkan Plaintext : ";
-    cin >> a;
-    cout << "Masukkan Key : ";
-    cin >> b;
-    string original = a;
-    Vigenere chiper = b;
 
-    string encrypted = chiper.encrypt(original);
-    string decrypted = chiper.decrypt(encrypted);
-    cout << endl;
-    cout << "encrypted :" << encrypted << endl;
-    cout << "decrypted :" << decrypted << endl;
-}
+string a, b;
+cout << "Masukkan Plaintext : ";
+cin >> a;
+cout << "Masukkan Key : ";
+cin >> b;
+string original = a;
+Vigenere chiper = b;
+string encrypted = chiper.encrypt(original);
+string decrypted = chiper.decrypt(encrypted);
+cout << endl;
+cout << "encrypted :" << encrypted << endl;
+cout << "decrypted :" << decrypted << endl;
