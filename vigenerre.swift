@@ -52,15 +52,19 @@ public:
     }
 };
 
-string a, b;
-cout << "Masukkan Plaintext : ";
+var a, b;
+print("Masukkan Plaintext : \n");
 cin >> a;
-cout << "Masukkan Key : ";
+print("Masukkan Key : \n");
 cin >> b;
 string original = a;
 Vigenere chiper = b;
 string encrypted = chiper.encrypt(original);
 string decrypted = chiper.decrypt(encrypted);
 cout << endl;
-cout << "encrypted :" << encrypted << endl;
-cout << "decrypted :" << decrypted << endl;
+print("encrypted :")
+print(encrypted)
+print("\n");
+print("decrypted :" )
+print(decrypted)
+print("\n");
