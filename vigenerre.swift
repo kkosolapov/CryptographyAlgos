@@ -1,10 +1,9 @@
 import Foundation
 
-public:
-    string key;
-    Vigenere(string key)
-    {
-        for (int i = 0; i < key.size(); ++i)
+string key;
+Vigenere(string key)
+
+for (int i = 0; i < key.size(); ++i)
         {
             if (key[i] >= 'A' && key[i] <= 'Z')
                 this->key += key[i];
@@ -12,7 +11,8 @@ public:
                 this->key += key[i] + 'A' - 'a';
         }
     }
-    string encrypt(string text)
+
+string encrypt(string text)
     {
         string out;
 
