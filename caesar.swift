@@ -1,42 +1,21 @@
 import Foundation
 
-string CaesarCipher(int displacement, string &input);
+func CaesarCipher(displacement: Int, input: String) -> String {
+  var coded = "";
 
-int main(int argc, const char* argv[]){
-  string message;
-  int displace;
-
-  cout << "Please enter a message to be coded." << endl;
-  cin >> message;
-  cout << "Please enter the displacement value between 0 and 25." << endl;
-  cin >> displace;
-
-  if(displace > 25 || displace < 0){
-    cout << "Displacement must be between 0 and 25" << endl;
-  }else{
-    string coded = CaesarCipher(displace, message);
-    cout << message << "\n" << coded << "\nend\n";
-  }
-
-  return 0;
-}
-
-string CaesarCipher(int displacement, string &input){
-  string coded = "";
-
-  for(int i = 0; i < input.length(); i++){
+  for i = 0...input.length(){
     char currChar = input[i];
-    if(currChar >= 65 && currChar <= 90){
+    if currChar >= 65 && currChar <= 90{
       currChar += displacement;
-      if(currChar > 90){
+      if currChar > 90{
         currChar -= 26;
       }
-    }else if(currChar >= 97 && currChar <= 122){
-      if(displacement + currChar >= 128){
+    }else if currChar >= 97 && currChar <= 122{
+      if displacement + currChar >= 128{
         currChar -= 26;
       }
       currChar += displacement;
-      if(currChar > 122){
+      if currChar > 122{
         currChar -= 26;
       }
     }
@@ -44,4 +23,22 @@ string CaesarCipher(int displacement, string &input){
   }
 
   return coded;
+}
+
+
+var message;
+var displace;
+
+print("Please enter a message to be coded.\n"
+message = readline();
+print("Please enter the displacement value between 0 and 25\n");
+displace = readline();
+if displace > 25 || displace < 0 {
+   print("Displacement must be between 0 and 25\n");
+} else{
+   string coded = CaesarCipher(displace, message);
+   print(\(message)
+   print("\n")
+   print(\(coded))
+   print("\n");
 }
