@@ -3,7 +3,7 @@ import Foundation
 func CaesarCipher(displacement: Int, input: String) -> String {
   var coded = "";
 
-  for i = 0...input.length(){
+  for i in 0...input.length(){
     char currChar = input[i];
     if currChar >= 65 && currChar <= 90{
       currChar += displacement;
@@ -29,14 +29,14 @@ func CaesarCipher(displacement: Int, input: String) -> String {
 var message;
 var displace;
 
-print("Please enter a message to be coded.\n"
-message = readline();
-print("Please enter the displacement value between 0 and 25\n");
-displace = readline();
+print("Please enter a message to be coded\n")
+message = readline()
+print("Please enter the displacement value between 0 and 25\n")
+displace = readline()
 if displace > 25 || displace < 0 {
-   print("Displacement must be between 0 and 25\n");
+   print("Displacement must be between 0 and 25\n")
 } else{
-   string coded = CaesarCipher(displace, message);
+   string coded = CaesarCipher(displace, message)
    print(\(message)
    print("\n")
    print(\(coded))
