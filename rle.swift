@@ -1,5 +1,3 @@
-//Compression
-
 extension Data {
     public func compressRLE() -> Data {
         var data = Data()
