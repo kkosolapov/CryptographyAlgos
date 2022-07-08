@@ -1,11 +1,11 @@
 func caesarCipher(string: String, shift: Int) -> String {
     var result = ""
-    for char in string.characters {
+    for char in string{
         let ascii = char.asciiValue
         if ascii == nil {
             result.append(char)
         } else {
-            let newAscii = ascii! + shift
+            let newAscii = Int(ascii!) + shift
             if newAscii > 127 {
                 result.append(Character(UnicodeScalar(newAscii - 127)!))
             } else {
@@ -16,4 +16,4 @@ func caesarCipher(string: String, shift: Int) -> String {
     return result
 }
 
-caesarCipher("Hello World!", shift: 3)
+caesarCipher(string: "Hello World!", shift: 3)
