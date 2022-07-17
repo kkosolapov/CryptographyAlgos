@@ -1,19 +1,28 @@
-func caesarCipher(string: String, shift: Int) -> String {
-    var result = ""
-    for char in string{
-        let ascii = char.asciiValue
-        if ascii == nil {
-            result.append(char)
-        } else {
-            let newAscii = Int(ascii!) + shift
-            if newAscii > 127 {
-                result.append(Character(UnicodeScalar(newAscii - 127)!))
-            } else {
-                result.append(Character(UnicodeScalar(newAscii)!))
-            }
-        }
+import Foundation
+
+struct CaesarCipher {
+    
+    static func main() throws {
+        let text = readLine() ?? ""
+        
+        print(text.encode())
     }
-    return result
 }
 
-caesarCipher(string: "Hello World!", shift: 3)
+extension String {
+    static let alphabet = "abcdefghijklmnopqrstuvwxyz".map { "\($0)" }
+
+	func encode() -> String {
+	    return self
+	    	.map { char in
+	    		if let index = String.alphabet.firstIndex(of: "\(char)") {
+
+    			return String.alphabet[(index + 1) % 26]
+				}
+				return "\(char)"
+	    	}
+	    	.joined(separator: "")
+	}
+}
+
+try! CaesarCipher.main()
